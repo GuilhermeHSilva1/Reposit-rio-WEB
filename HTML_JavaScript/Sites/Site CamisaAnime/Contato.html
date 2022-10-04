@@ -1,0 +1,112 @@
+<!DOCTYPE  html>
+<html>
+      
+    <head> 
+		<meta charset="uft-8">
+		<title>Contato</title>
+        <link href="estilo/estilo.css" rel="stylesheet" type="text/css">
+        
+       
+    </head>
+    
+    <body class="Corpo">
+        <header>
+            <div class="Cabecario">
+                <div class="DivPesquisa">
+                    <img src="img/Pesquisa.png" width="20" class="ImagemPesquisa">
+                    <input class="Pesquisa" type="text" placeholder="Pesquisa...">
+                </div>
+                    <div >    
+                         <a href="Home.html"><img src="img/Logo.png" alt="Imagem Logo GG" class="ImagemCabecario"></a>
+                    </div>
+                <div class="ImagemLogin">
+                    <img src="img/Login.png" width="50">
+                    <p class="TextoLogin">Login</p>
+                </div>
+                <div class="Carrinho">
+                    <img src="img/Carrinho.png" class="ImagemCarrinho" width="50">
+                        <div id="Teste">
+                            <p class="TextoLogin">Carrinho</p>
+                        </div>
+                </div>
+            </div>
+        </header>
+                   
+        <fieldset class="cadastro">
+
+            <div class="meio">
+                
+            <h1 id="tituloC">Fale Conosco</h1><br>
+                
+
+                <form name="meu_form">
+
+                    <label>Nome:</label>
+                    <input type="text" name="nome" placeholder="Name"/><br><br>
+
+                    <label>E-mail:</label>
+                    <input type="e-mail" name="email" placeholder="exemplo@endereco.com"/><br><br>
+
+                    <label>Fone:</label>
+                    <input type="phone" name="number" placeholder="(xx)xx-xx-xx-xx"/><br><br>
+
+                    <textarea name="mensagem" rows="10" cols="40" placeholder="Deixe sua observação"></textarea><br> 
+
+                    <input class="BotaoOferta" type="button" onclick="Enviar()"; value="Enviar"/><br>
+                </form>
+            </div>
+
+            <p id="nomep"></p>
+            <p id="emailp"></p>
+            <p id="number"></p>
+
+
+            <script>
+                function Enviar(){
+                var nome = meu_form.nome.value;
+                if(nome.length<5){
+                alert("Você digitou:" +nome+". Informe um nome válido!");
+                } else {
+                document.getElementById("nomep").innerHTML = nome ;      
+                }
+
+                var email = meu_form.email.value;
+                if(email.length <10){
+                alert("Você digitou:" +email+". Informe um email válido!");
+                } else {
+                document.getElementById("emailp").innerHTML = email;
+                }
+
+                var number = meu_form.number.value;
+                if(number.length <10){
+                alert("Você digitou:" +number+". Informe um numero válido!");
+                } else {
+                document.getElementById("number").innerHTML = number;
+                }
+                
+                }
+
+            </script>
+        </fieldset>
+        <footer>
+            <div class="Telefone">
+                <img src="img/Telefone.png" width="30" class="ImagemFooter">
+                <p>(47) 3372-9500</p>
+            </div>
+             <div class="Gmail">
+                <img src="img/Gmail.png" width="30" class="ImagemGmail">
+                 <p>Guilherme_h_silva1@estudante.sc.senai.br</p>
+                 <p>Gustavo_Brum@estudante.sc.senai.br</p>
+            </div>
+			<div id="endereco">
+                <address class="Endereco">
+                    <p><strong>Endereço:</strong>R. Isidoro Pedri, 263</p> 
+                    <p>Rio Molha - 89259-590</p>
+                    <p>Jaraguá do Sul - SC</p>
+                </address>
+            </div>
+        </footer>
+        
+    </body>
+</html>
+

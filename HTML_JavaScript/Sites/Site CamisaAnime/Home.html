@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Geag Gang</title>
+        <link href="estilo/estilo.css" rel="stylesheet" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+    </head>
+    <body class="Corpo">
+        <!-- CABECALHO -->
+        <header>
+            <div class="Cabecario">
+                <div class="DivPesquisa">
+                    <img src="img/Pesquisa.png" alt="ImagemPesquisa" width="20" class="ImagemPesquisa">
+                    <input class="Pesquisa" type="text" placeholder="Pesquisa...">
+                </div>
+                    <div>    
+                        <img src="img/Logo.png" alt="Logo GG" class="ImagemCabecario">
+                    </div>
+                <div class="ImagemLogin">
+                    <img src="img/Login.png" alt="Imagem Login" width="50">
+                    <p class="TextoLogin">Login</p>
+                </div>
+                <div class="Carrinho">
+                    <img src="img/Carrinho.png" alt="Imagem Carrinho" class="ImagemCarrinho" width="50">
+                        <div id="Teste">
+                            <p class="TextoLogin">Carrinho</p>
+                        </div>
+                </div>
+            </div>
+            <div id="Introucao">
+                    <div id="Masculino">
+                        <a href="Moletom.html" class="Decoration">Moletom</a>
+                    </div>
+                    <div id="Feminino">
+                        <a href="Camisa.html" class="Decoration">Camisa</a>
+                    </div>
+                    <div id="Calças">
+                        <a href="Hist%C3%B3ria.html" class="Decoration">História</a>
+                    </div>
+                    <div id="Moletom">
+                        <a href="Contato.html" class="Decoration">Contato</a>
+                    </div>
+            </div>
+        </header>
+        
+        <!-- PROGRAMA PRINCIPAL -->
+        <main>
+                    <div id="Melhores">
+                        <img class="Estrela" src="img/Estrelas.png">
+                        <p>Populares no Site</p>
+                        <img class="Estrela2" src="img/Estrelas.png">
+                    </div>
+                
+            <div class="Populares">
+                    <p class="OfertasLetra">Moletom Otaku</p>
+                <div>
+                    <img class="Imagens" src="img/Moletom1.jpg" alt="Imagem Moletom">
+                </div>
+                    <p class="APartir">A Partir de apenas</p>
+                    <p class="FonteOferta1">R$110,00</p>
+                <a href="Comprar1.html" class="BotaoOferta">Comprar</a>
+                    </div>
+            <div class="Populares">
+                <p class="OfertasLetra">Moletom Kaneki</p>
+                <div>
+                    <img class="Imagens" alt="Imagem Moletom" src="img/Moletom2.jpg">
+                </div>
+                    <p class="APartir">A Partir de apenas</p>
+                    <p class="FonteOferta1">R$150,00</p>
+                <a href="Comprar2.html" class="BotaoOferta">Comprar</a>
+            </div>
+            <div class="Populares">
+                    <p class="OfertasLetra">Camisa Law</p>
+                <div>
+                    <img class="Imagens" alt="Imagem Camisa" src="img/Camisa1.jpg" >
+                </div>
+                    <p class="APartir">A Partir de apenas</p>
+                    <p class="FonteOferta1">R$50,00</p>
+                <a href="Comprar3.html" class="BotaoOferta">Comprar</a>
+            </div>
+            <div class="Populares">
+                <p class="OfertasLetra">Camisa L</p>
+                <div>
+                    <img class="Imagens" alt="Imagem Camisa" src="img/Camisa2.jpg">
+                </div>  
+                    <p class="APartir">A Partir de apenas</p>
+                    <p class="FonteOferta1">R$60,00</p>
+                <a href="Comprar4.html" class="BotaoOferta">Comprar</a>
+            </div>
+            
+            <div>
+            <img src="img/GOKU.png" id="Goku" alt="Imagem do Goku">
+            <script type="application/processing">
+
+void setup() {
+size(1349,450);
+} 
+
+var speed = -5;
+var BolaKame = 1005;
+var Barra = 1150;
+var BarraBranca = 1140;
+
+
+draw = function(){
+
+background(41, 14, 77);
+
+fill(17, 83, 237);
+ellipse(1300,200,200,200);
+rect(Barra,173,10000,60);
+fill(118, 217, 245);
+rect(BarraBranca,183,10000,40);
+
+fill(118, 217, 245)
+ellipse(1300,200,150,150);
+
+fill(17, 83, 237);
+ellipse(BolaKame,200,300,300);
+
+
+fill(118, 217, 245)
+ellipse(BolaKame,200,200,200);
+
+if(BolaKame < 100){
+    speed = 1000;
+}
+if(Barra < 100){
+    speed = 1000;
+}
+if(BarraBranca < 100){
+    speed = 1000;
+}
+if(BolaKame > 1005){
+    speed = -5;
+}
+if(Barra > 1150){
+    speed = -5;
+}
+if(BarraBranca > 1140){
+    speed = -5;
+}
+    Barra = Barra + speed;
+    BarraBranca = BarraBranca + speed;
+    BolaKame = BolaKame + speed;
+}
+
+
+</script> 
+<canvas id="animacao"> </canvas>
+            </div>
+            
+        </main>
+        
+        <!-- RODAPE -->
+        <footer>
+            <div class="Telefone">
+                <img src="img/Telefone.png" alt="Imagem Telefone" width="30" class="ImagemFooter">
+                <p>(47) 3372-9500</p>
+            </div>
+             <div class="Gmail">
+                <img src="img/Gmail.png" alt="Imagem Gmail" width="30" class="ImagemGmail">
+                 <p>Guilherme_h_silva1@estudante.sc.senai.br</p>
+                 <p>Gustavo_Brum@estudante.sc.senai.br</p>
+            </div>
+			<div id="endereco">
+                <address class="Endereco">
+                    <p><strong>Endereço:</strong>R. Isidoro Pedri, 263</p> 
+                    <p>Rio Molha - 89259-590</p>
+                    <p>Jaraguá do Sul - SC</p>
+                </address>
+            </div>
+        </footer>
+    </body>
+</html>
